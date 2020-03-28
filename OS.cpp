@@ -3,7 +3,8 @@ using namespace std;
 int main()
 {
 	
-	int p,q,resource,max_need=0,count=0;
+	
+	label:int p,q,resource,max_need=0,count=0;
 	cout<<"Enter Number of Resources available : \n";
 	cin>>p;
 	cout<<"Enter Number of Processes available : \n";
@@ -63,18 +64,30 @@ int main()
 					}
 				}
 			}
-						for(int i=0;i<q;i+1)
-						{
-							if(End[i]==1)
-							count++;
-						}
-						if(count==q)
-						break;
+			for(int i=0;i<q;i++)
+			{
+				if(End[i]==1)
+				count++;
+			}
+			if(count==q)
+			break;
 		}
-						cout<<"\n\n";
-						cout<<"\tAS LOOKING ABOVE\t";
-						cout<<"\n\n";
-						cout<<"No Dead Lock";
+		cout<<"\n\n";
+		cout<<"\tAS LOOKING ABOVE\t";
+		cout<<"\n\n";
+		cout<<"No Dead Lock\n";
+		cout<<"DO YOU WANT TO CONTINUE YES or NO:\n";
+		char c;
+		cin>>c;
+		if(c=='Y' || c=='y')
+		{
+			goto label;
+		}
+		else
+		{
+			exit;
+		}	
+						
 			
 					
 					
